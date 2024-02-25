@@ -1,3 +1,5 @@
+// Find the Largest Area of Square Inside Two Rectangles
+// https://leetcode.com/problems/find-the-largest-area-of-square-inside-two-rectangles/description/
 #include<bits/stdc++.h>
 using namespace std;
 class Solution {
@@ -38,3 +40,13 @@ int main() {
     cout<<s.largestSquareArea(bottomLeft,topRight);
 
 }
+/*
+There exist n rectangles in a 2D plane. You are given two 0-indexed 2D integer arrays bottomLeft and topRight, both of size n x 2, where bottomLeft[i] and topRight[i] represent the bottom-left and top-right coordinates of the ith rectangle respectively.
+You can select a region formed from the intersection of two of the given rectangles. You need to find the largest area of a square that can fit inside this region if you select the region optimally.
+Return the largest possible area of a square, or 0 if there do not exist any intersecting regions between the rectangles.
+
+Input: bottomLeft = [[1,1],[2,2],[3,1]], topRight = [[3,3],[4,4],[6,6]]
+Output: 1
+Explanation: A square with side length 1 can fit inside either the intersecting region of rectangle 0 and rectangle 1, or the intersecting region of rectangle 1 and rectangle 2. Hence the largest area is side * side which is 1 * 1 == 1.
+It can be shown that a square with a greater side length can not fit inside any intersecting region.
+*/

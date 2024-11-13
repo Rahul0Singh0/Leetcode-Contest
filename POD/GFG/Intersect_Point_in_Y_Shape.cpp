@@ -28,4 +28,21 @@ class Solution {
         }
         return -1;
     }
+    int intersectPoint(Node* head1, Node* head2) {
+        int c1=0,c2=0;
+        Node *p1=head1,*p2=head2;
+        while(p1) c1++, p1=p1->next;
+        while(p2) c2++, p2=p2->next;
+        p1=head1;
+        p2=head2;
+        int diff=abs(c1 - c2);
+        if(c1 > c2) for(int i = 0; i < diff; i++) p1=p1->next;
+        else if(c1 < c2) for(int i = 0; i < diff; i++) p2=p2->next;
+        while(p1!=p2) {
+            p1=p1->next;
+            p2=p2->next;
+        }
+        if(p1 != nullptr) return p1->data;
+        return -1;
+    }
 };
